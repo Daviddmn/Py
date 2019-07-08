@@ -17,5 +17,35 @@ if __name__ == '__main__':
    app.run(debug = True)
 
 
+###################################################################################################################################
+
+# შევქმნათ HTML form მეთოდი რომელიც სერვერს გადააწვდის მონაცემებს ცვლადებში, ამ ცვლადებს კიდე სერვერს გამოვაქვეყნებინებთ ბრაუზერში
+
+<html>
+   <body>
+      <form action = "http://localhost:5000/" method = "post">
+         <p>Enter Name:</p>
+         <input type = "text" name = "test" >
+         <p><input type = "submit" value = "submit" /></p>
+      </form>
+   </body>
+</html>
+
+# სერვერს დავქოქავთ.
+# ჰტმლ კოდს შევინახავთ და გავუშვებთ ბრაუზერში, შევიყვანთ ტექსტს დავაწვებით ღილაკს და, შეყვანილი მონაცემები გადაეცემა ვებ-სერვერს.
+
+from flask import Flask,request
+app = Flask(__name__)
+
+@app.route('/',methods=['GET',"POST"])
+def hello_world():
+    test = request.form['test']
+    return test
+
+if __name__ == '__main__':
+   app.run()
+
+
+
 
 

@@ -8,11 +8,11 @@ app = Flask(__name__)
 #ამ პარამეტრის არქონის შემთხვევაში თუ გავაგზავნიდით POST მეთოდს ამოგვიგდებდა 405 Method Not Allowed შეცდომას
 @app.route('/one', methods=['GET','POST'])
 def bacon():
-    if request.method == 'POST':
+    if request.method == 'POST':   # მოთხოვნის მეთოდი თუ იქნება POST ი დააბრუნებს ქვემოთ მოცემულ ტექსტს. 
         return "Method used: POST"
     else:
         return '<form action="/one" method="POST"><input type="submit" value="submit"/></form>'
-
+    # თუ იქნება სხვა მოთხოვნის მეთოდი, დააბრუნებს form ის ღილაკს რომელიც გააგზავნის მოთხოვნას POST მეთოდით
 if __name__ == '__main__':
    app.run(debug = True)
 

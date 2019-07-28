@@ -36,5 +36,20 @@ if __name__ == '__main__':
    
    # ფაილი აიტვირთება ფლასკის სერვერის ფაილში.
    
+
+########
+#ფაილის ატვირთვისას, ფაილის ზომაზე ლიმიტის დასადებად ვაკეთებთ ასე :
+# if len(f.read()) < (30720):  რიცხვებით განისზღვრება ბაიტები/bytes 
+
+@app.route('/uploader', methods = ['GET', 'POST'])
+def upload_files():
+   if request.method == 'POST':
+      f =request.files['file']
+      if len(f.read()) < (30720):  # თუ ფაილი ნაკლებია 30 კილობაიტზე მაშინ აიტვირთება ფაილი            
+          f.save(f.filename)
+          return 'uploaded'
+      else:    
+          return('File size too big ! (max:30Kb)') # თუ მეტია 30 კილობაიტზე გამოიტანს რომ ფაილი აღემატება ნორმას ! 
+
    
    

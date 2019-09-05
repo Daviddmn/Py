@@ -4,4 +4,6 @@
 import os 
 os.startfile(r'C:\Users\Geo\Desktop\something.txt')
 
-# 2)
+# 2) Execute file method two, 
+import os
+os.system(r'C:\Users\Geo\Desktop\something.txt')

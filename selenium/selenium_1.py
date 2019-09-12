@@ -5,8 +5,8 @@ driver = webdriver.Chrome('C:\\Users\\user\\Desktop\\chromedriver.exe') # პა
 
 driver.get('https://www.website.com/home/us/') # ამით შევა მოცემულ ბმულზე.
 
-z=driver.find_element_by_css_selector('a')
-z.click()
-z.back()
+z=driver.find_element_by_css_selector('a') # შეეცდება css სელექტორი 'a' ს ელემენტი და მისამართი იპოვოს თუ იპოვის
+z.click() # მაგ ელემენტს დააკლიკებს,
+z.back() # ამით უკან დაბრუნება მოხდება 
 
 

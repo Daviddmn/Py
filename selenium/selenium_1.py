@@ -7,7 +7,7 @@ driver.get('https://www.website.com/home/us/') # ამით შევა მ�
 
 z=driver.find_element_by_css_selector('a') # შეეცდება css სელექტორი 'a' ს ელემენტი და მისამართი იპოვოს თუ იპოვის
 z.click() # მაგ ელემენტს დააკლიკებს,
-z.back() # ამით უკან დაბრუნება მოხდება 
+driver.back() # ამით უკან დაბრუნება მოხდება 
 
 
 #### Version 2.

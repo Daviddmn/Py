@@ -4,4 +4,4 @@ hello will be added მალე
 
 და 
 
-განხილვა bs4 
+განხილვა XML 

@@ -6,7 +6,7 @@ or (უკიდურეს შემთხვევაში)
 
 Open Python IDLE
 type:
-import os
+import os |
 os.getcwd()
 
 next, copy path:

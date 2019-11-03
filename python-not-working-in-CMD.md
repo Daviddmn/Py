@@ -10,4 +10,5 @@ import os |
 os.getcwd()
 
 next, copy path:
+
 next, open CMD and go to copied path. pip&python will work inside.
